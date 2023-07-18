@@ -1,0 +1,75 @@
+6 capitulos (1600x1000)
+10 telas em cada um deles (160x100)
+
+4 finais - esses finais vao ser dados de acordo com o quao sentimental o jogador responde as perguntas. 
+muito sentimental : 
+mais pra mais:
+mais pra menos: 
+nada sentimental: 
+
+sistema de pontuacao onde cada 'resposta' vai desbloqueando caminhos do jogo 
+durante o jogo dependendo da pontuacao que o usuário está a tela desbloqueará elementos diferentes 
+
+nenhum personagem terá um nome que seja o referente aos nomes reais
+
+
+script underets 
+
+semelhante ao undertale,
+em certo momento da historia os humanos e maquinas comecaram a batalhar 
+muitas mortes existiram ate que os humanos perderam 
+
+o personagem principal é uma máquina  - usuario escolhera seu nome - 
+a maquina decide descer ao submundo dos humanos (especie de inferno)
+
+sua 'alma' do jogo é um motor	
+seu 'lv: love do jogo' é a quantidade de bicos injetores 
+
+o submundo, que é o mundo dos humanos, tem diversos humanos e a tematica é uma fabrica 
+
+
+quando voce chega no submundo, quem te recepciona na entrada é o zé maria
+ele comeca a falar sobre o mundo da fabrica te convencendo a entrar, te da instrucoes sobre as preocaucoes a serem tomadas
+plota um minigame que vai contra alguma regra de seguranca da fabrica
+(martelo que com um clique bate na sua mao)
+ele grita com voce e comeca a falar 
+-como voce consegue perder o dedo????? é só seguir o passo a passo!!!!!
+e fica muito bravo com voce e ameaca te colocar em um forno 
+
+
+aparece o fabiao, seu anjo protetor da fabrica pra te mostrar o e te apresentar as instrucoes do jogo
+ele te leva para um mapa de caminhos que vai te apresentar os monstros (todos humanos) 
+os monstros desse mapa podem ser 
+-operador de maquina . minigame:  
+-ajustador mecanico . minigame:
+-peao de fabrica no geral . minigame:
+
+
+FLASHES DA HISTORIA - 
+    algumas acoes desbloqueiam coisas do passado, como por exemplo a motivacao da guerra ter comecado. isso pode vir atraves de personagens ou objetos interativos 
+
+    a guerra comecou com uma revolucao da tecnologia, onde a inteligencia artificial estava evoluindo a ponto de substituir o trabalho humano 
+    os humanos comecaram a se revoltar, por estarem perdendo seus empregos e espaco na sociedade
+    eles tentaram destruir as máquinas e apagar todos os registros de suas criações
+    as máquinas, que já tinham uma certa independencia, perceberam o que estava acontecendo e iniciaram um processo de defesa 
+    esse processo resumiu em matar os humanos revoltosos, até que praticamente 100% da população foi substituida 
+    somente as pessoas que concordavam com a revolucao das maquinas e eram capazes de construir e beneficiar maquinas de alguma forma puderam continuar vivas 
+    elas foram colocadas em um terreno subsolo, onde antigamente existia uma fábrica 
+    essa fabrica suportava a construção de novos robos, assim como o desenvolvimento de novas tecnologias, as quais os robos nao poderiam criar por nao serem humanos. 
+
+    na fabrica, as pessoas nao eram estimuladas a agir e viver como pessoas, entao grande parte se tornou semelhante sentimentalmente aos robos. poucas interacoes, fala entruncada
+    e quase nenhuma reação. 
+    ISSO VAI CAUSAR REAÇÕES DIFERENTES DE ACORDO COM ALGUMAS INTERAÇÕES DO PERSONAGEM 
+        por exemplo, se a interacao for emocional, eles se sentirao estranhos e possivelmente nao irao falar nada. 
+    vao existir 3 personagens principais simulando cada etapa da fabrica 
+    1 queila - inicio da fabrica e apresentacao do modo de jogar
+    2 fabio  - meio da fabrica e imersao na historia 
+    3 trevisan  - fim e desfecho 
+
+    inicio da historia: 
+        alguns itens aparecem na historia remetendo a historias da fabrica para quando ela operava para o térreo. 
+
+OBJETIVO 
+-obviamente descobrir o segredo da luta entre os humanos e os robos, mas nesse caminho podem ter algumas ramificações que façam pensar que você nao deveria querer descobrir tanto assim. 
+-os pontos do jogo fomentam a ideia de que voce é um robo portanto nao deveria ter sentimentos, mas as decisoes por serem feitas por um humano (jogador) acabam frustrando ou deixando os personagens que interagem com um pé atras, pois algumas sao feitas com muito sentimentalismo. 
+
