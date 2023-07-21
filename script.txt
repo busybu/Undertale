@@ -12,7 +12,7 @@ durante o jogo dependendo da pontuacao que o usuário está a tela desbloqueará
 
 nenhum personagem terá um nome que seja o referente aos nomes reais
 
-
+comitei errado
 script underets 
 
 semelhante ao undertale,
