@@ -1,0 +1,17 @@
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.csproj.AssemblyReference.cache
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.Form1.resources
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.csproj.GenerateResource.cache
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.AssemblyInfoInputs.cache
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.AssemblyInfo.cs
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.csproj.CoreCompileInputs.cache
+C:\Users\disrct\source\repos\Undertale1\Undertale1\bin\Debug\net6.0-windows\Undertale1.exe
+C:\Users\disrct\source\repos\Undertale1\Undertale1\bin\Debug\net6.0-windows\Undertale1.deps.json
+C:\Users\disrct\source\repos\Undertale1\Undertale1\bin\Debug\net6.0-windows\Undertale1.runtimeconfig.json
+C:\Users\disrct\source\repos\Undertale1\Undertale1\bin\Debug\net6.0-windows\Undertale1.dll
+C:\Users\disrct\source\repos\Undertale1\Undertale1\bin\Debug\net6.0-windows\Undertale1.pdb
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.dll
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\refint\Undertale1.dll
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.pdb
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\Undertale1.genruntimeconfig.cache
+C:\Users\disrct\source\repos\Undertale1\Undertale1\obj\Debug\net6.0-windows\ref\Undertale1.dll

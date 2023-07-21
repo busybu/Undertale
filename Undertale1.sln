@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undertale1", "Undertale1\Undertale1.csproj", "{D040590D-66FB-4E82-BA48-CDF402542747}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{E512D5DC-5C30-4498-A8E7-D63044B850F2}"
+	ProjectSection(SolutionItems) = preProject
+		Character.cs = Character.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D040590D-66FB-4E82-BA48-CDF402542747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D040590D-66FB-4E82-BA48-CDF402542747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D040590D-66FB-4E82-BA48-CDF402542747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D040590D-66FB-4E82-BA48-CDF402542747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C9DAAFC-010A-455A-AD33-0A8E3F4A13A4}
+	EndGlobalSection
+EndGlobal

@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Undertale")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Undertale1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Undertale")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Undertale")]
+[assembly: System.Reflection.AssemblyProductAttribute("Undertale1")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Undertale1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
