@@ -35,40 +35,86 @@ namespace Undertale1
         private Game(PictureBox pb, Form form)
         {
             gc = new GraphicsControl(pb);
-            sprite = new Sprite(Image.FromFile("C:\\Users\\disrct\\source\\repos\\Undertale1\\sprites\\personagens\\spriteNoBG.png"), gc);
-            bg = Image.FromFile("C:\\Users\\disrct\\source\\repos\\Undertale1\\sprites\\mapas\\map.png");
+            sprite = new Sprite(Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\spriteNoBG.png"), gc);
+            bg = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\mapas\\map.png");
             forms = form;
             gc.InitGraphics();
         }
 
         public void Start()
         {
-            int x = forms.Width / 2, y = forms.Height/2 ;
-
+            int wid = 30, hei = 33;
+            sprite.AddCharacter(wid, hei);
+            sprite.AnimationSpeed = TimeSpan.FromMilliseconds(200);
+            sprite.Rec = new Rectangle(
+                forms.Width / 2 - 3 * wid / 2,
+                forms.Height / 2 - 3 * hei / 2,
+                3 * wid,
+                3 * hei
+            );
             tm.Interval = 20;
             tm.Start();
 
+            int x = 0;
+            int y = 3833;
             tm.Tick += delegate
             {
-                Rectangle recImg = new Rectangle(0, 3833, 400, 250);
-                
+                Rectangle recImg = new Rectangle(x, y, 400, 250);
+
+                gc.ClearAll();
                 gc.DrawFullScreenRec(bg, recImg);
                 sprite.Draw();
                 gc.Refresh();
             };
             forms.KeyDown += (s, e) =>
             {
-                if(e.KeyCode == Keys.Escape) 
+                if (e.KeyCode == Keys.Escape)
                     Application.Exit();
 
-                if (e.KeyCode == Keys.D)
+                switch (e.KeyCode)
                 {
-                    x++;
-                    sprite.State = 1;
-                }  
-                if(e.KeyCode == Keys.W)
-                    y--;
+                    case Keys.W:
+                        sprite.State = 0;
+                        y -= 3;
+                        break;
+
+                    case Keys.D:
+                        sprite.State = 1;
+                        x += 3;
+                        break;
+
+                    case Keys.A:
+                        sprite.State = 2;
+                        x -= 3;
+                        break;
+
+                    case Keys.S:
+                        sprite.State = 3;
+                        y += 3;
+                        break;
+                }
             };
+            forms.KeyUp += (s, e) =>
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        sprite.State = 4;
+                        break;
+
+                    case Keys.D:
+                        sprite.State = 4;
+                        break;
+
+                    case Keys.A:
+                        sprite.State = 4;
+                        break;
+
+                    case Keys.S:
+                        sprite.State = 4;
+                        break;
+                }
+            };   
         }
 
     }

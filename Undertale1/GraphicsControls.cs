@@ -42,8 +42,7 @@ namespace Undertale1
 
         public void ClearAll()
         {
-            pb.Refresh();
-            g.Clear(Color.White);
+            g.Clear(Color.Black);
         }
 
         internal void Refresh()
