@@ -26,7 +26,7 @@ namespace Undertale1
             pb.Image = bitmap;
         }
 
-        public void DrawRec(Rectangle rec) => g.DrawRectangle(Pens.Black, rec);
+        public void DrawRec(Rectangle rec) => g.DrawRectangle(Pens.Red, rec);
 
         //public void DrawImg(Image img) => g.DrawImage(img, 0, 0);
 
