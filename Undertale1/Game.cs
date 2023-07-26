@@ -58,6 +58,13 @@ namespace Undertale1
             map.RestricedArea.Add(new Rectangle(375, 4015, 30, 50));
             map.RestricedArea.Add(new Rectangle(18, 3862, 8, 210));
             map.RestricedArea.Add(new Rectangle(384, 3995, 316, 9));
+            map.RestricedArea.Add(new Rectangle(384, 3905, 296, 55));
+
+            map.Interactions.Add(new Message
+            {
+                Area = new Rectangle(455, 3915, 39, 43),
+                Text = "É o Bobert Rosch"
+            });
 
             tm.Interval = 20;
             tm.Start();
@@ -71,7 +78,7 @@ namespace Undertale1
 
                 gc.ClearAll();
                 gc.DrawFullScreenRec(bg, recImg);
-
+                gc.DrawMessageBox(new Rectangle(),"albuelbe");
                 sprite.Draw();
                 gc.Refresh();
             };
@@ -85,25 +92,25 @@ namespace Undertale1
                     case Keys.W:
                         sprite.State = 0;
                         y -= 3;
-                        y = map.VerifyArea();
+                        (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.D:
                         sprite.State = 1;
                         x += 3;
-
+                        (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.A:
                         sprite.State = 2;
                         x -= 3;
-
+                        (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.S:
                         sprite.State = 3;
                         y += 3;
-
+                        (x, y) = map.VerifyArea(x, y, sprite);
                         break;
                 }
             };

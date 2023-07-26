@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,22 @@ namespace Undertale1
         }
 
         public void DrawRec(Rectangle rec) => g.DrawRectangle(Pens.Red, rec);
+
+        public void DrawMessageBox(Rectangle rec, string message)
+        {
+            g.FillRectangle(Brushes.Black, rec);
+            g.DrawRectangle(Pens.White, rec);
+
+            var pFontCollection= new PrivateFontCollection();
+            pFontCollection.AddFontFile("C:\\Users\\disrct\\Desktop\\Undertale\\PixeloidSans-mLxMm.ttf");
+            FontFamily family = pFontCollection.Families[0];
+            var font = new Font(family, 12f);
+
+            g.DrawString(message, font, Brushes.White, rec, new StringFormat()
+            {
+                LineAlignment = StringAlignment.Center,
+            });
+        }
 
         //public void DrawImg(Image img) => g.DrawImage(img, 0, 0);
 

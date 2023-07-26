@@ -13,8 +13,8 @@ namespace Undertale1
         public int X { get; set; }
         public int Y { get; set; }
         public List<Rectangle> RestricedArea { get; set; } = new List<Rectangle>();
-
-        public int VerifyArea(int x, int y, Sprite sprite)
+        public List<Interaction> Interactions { get; set; } = new List<Interaction>();
+        public (int x, int y) VerifyArea(int x, int y, Sprite sprite)
         {
             int value = 0;
             foreach(var rects in RestricedArea)
@@ -24,28 +24,34 @@ namespace Undertale1
                     switch (sprite.State)
                     {
                         case 0:
-                            value = rects.Y + rects.Height - 125;
-                            break;
+                            return (x, rects.Y + rects.Height - 127);
 
                         case 1:
-                            value = rects.Y + rects.Height - 200;
-                            break;
+                            return (rects.X - 202, y);
 
                         case 2:
-                            value = rects.X - 190;
-                            break;
+                            return (rects.X + rects.Width - 202, y);
 
                         case 3:
-                            value = rects.Y - 125;
-                            break;
-                            
+                            return (x, rects.Y - 127);
                     }
                 }
                 
             }
-            return value;
+            return (x, y);
         }
 
+        public void InteractArea(int x, int y)
+        {
+            foreach(var interaction in Interactions)
+            {
+                var area = interaction.Area;
+                if(area.Contains(x + 200, y + 125))
+                {
+
+                }
+            }
+        }
             
     }
 
