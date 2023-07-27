@@ -45,6 +45,7 @@ namespace Undertale1
     {
         public List<string> PostText { get; set; } = new List<string>();
         public Image Img { get; set; }
+        public Size? Size { get; set; }
 
         public Image NewImg { get; set; }
         public void ChangeImg()

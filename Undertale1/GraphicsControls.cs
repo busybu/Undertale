@@ -36,7 +36,7 @@ namespace Undertale1
             g.DrawRectangle(Pens.White, rec);
 
             var pFontCollection= new PrivateFontCollection();
-            pFontCollection.AddFontFile("C:\\Users\\disrct\\Desktop\\Undertale\\PixeloidSans-mLxMm.ttf");
+            pFontCollection.AddFontFile("C:\\Users\\User\\source\\repos\\Undertale\\PixeloidSans-mLxMm.ttf");
             FontFamily family = pFontCollection.Families[0];
             var font = new Font(family, 18f);
             var tilteFont = new Font(family, 16f);

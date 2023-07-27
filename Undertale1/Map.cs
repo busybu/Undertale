@@ -116,7 +116,9 @@ namespace Undertale1
                 switch (interaction)
                 {
                     case MutableInteract change:
-                        gc.DrawImg(change.Img, nonGloblaLocation);
+                        if (change.Size is not null)
+                            gc.DrawImgRec(change.Img, new Rectangle(nonGloblaLocation, change.Size.Value));
+                        else gc.DrawImg(change.Img, nonGloblaLocation);
                         break;
                 }
             }

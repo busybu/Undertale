@@ -35,10 +35,10 @@ namespace Undertale1
         private Game(PictureBox pb, Form form)
         {
             gc = new GraphicsControl(pb);
-            sprite = new Sprite(Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\spriteNoBG.png"), gc);
+            sprite = new Sprite(Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\personagens\\spriteNoBG.png"), gc);
             map = new Map();
             map.gc = gc;
-            bg = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\mapas\\map.png");
+            bg = Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\mapas\\map.png");
             forms = form;
             gc.InitGraphics();
         }
@@ -62,6 +62,11 @@ namespace Undertale1
             map.RestricedArea.Add(new Rectangle(384, 3905, 296, 55));
             map.RestricedArea.Add(new Rectangle(10, 4034, 390, 14));
             map.RestricedArea.Add(new Rectangle(674, 3925, 31, 24));
+            map.RestricedArea.Add(new Rectangle(821, 3279, 68, 88));
+            map.RestricedArea.Add(new Rectangle(671, 3668, 30, 153));
+            map.RestricedArea.Add(new Rectangle(814, 3728, 75, 102));
+            map.RestricedArea.Add(new Rectangle(879, 3826, 50, 34));
+            map.RestricedArea.Add(new Rectangle(690, 3647, 72, 53));
 
             map.Interactions.Add(new Message
             {
@@ -72,6 +77,31 @@ namespace Undertale1
                     "Na verdade, lá em cima nós nem temos grama"
                 }
             });
+            map.Interactions.Add(new Message
+            {
+                Area = new Rectangle(769, 3520, 24, 20),
+                Text =
+                {
+                    "Nem todas as alavancas são ruins... Assim como nem todo mundo aqui é bom ou mau, ou toda história seja verdadeira ou falsa, veja com seus próprios olhos, ande com seus próprios passos. Os humanos e as máquinas tem mais em comum do que pensam."
+                }
+            });
+            map.Interactions.Add(new Message
+            {
+                Area = new Rectangle(846, 3688, 10, 25),
+                Text =
+                {
+                    "Essas avalancas dão medo... Já ouvi falar que eles usavam ela quando precisavam desligar uma parte da fábrica. Quando falavam algo sobre 'férias coletivas', um sinônimo para o fim do mundo...."
+                }
+            });
+            map.Interactions.Add(new Message
+            {
+                Area = new Rectangle(795, 3728, 75, 102),
+                Text =
+                {
+                    "Aqui é onde costumavam vir os funcionários que foram forçados a entrar na fábrica, não parece ser um lugar muito atrativo...",
+                    "Uma pena que os humanos não dessem conta do quanto esses ambientes dão sono."
+                }
+            }); ;
             map.Interactions.Add(new Message
             {
                 Area = new Rectangle(455, 3915, 39, 60),
@@ -85,9 +115,10 @@ namespace Undertale1
             });
             map.Interactions.Add(new MutableInteract
             {
-                Img = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\heart.jpg"),
-                NewImg = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\heartBrok.png"),
+                Img = Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\personagens\\heart.jpg"),
+                NewImg = Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\personagens\\heartBrok.png"),
                 Area = new Rectangle(59, 3902, 28, 32),
+                Title = "Coração",
                 Text =
                 {
                     "'É preciso passar pela dor para sobreviver aqui'",
@@ -110,6 +141,19 @@ namespace Undertale1
                     "Nosso último recorde sem acidentes era 1604 dias :(", 
                     "Vou te ensinar algumas coisas a NÃO serem feitas aqui ok?!"
                 }
+            });
+            map.Interactions.Add(new MutableInteract
+            {
+                Img = Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\personagens\\instruction.png"),
+                NewImg = Image.FromFile("C:\\Users\\User\\source\\repos\\Undertale\\sprites\\personagens\\bloodinstruction.png"),
+                Area = new Rectangle(720, 3672, 35, 35),
+                Size = new Size(94, 94),
+                Title = "Eles",
+                Text =
+                {
+                    "Eles não querem que saibam a verdade sobr..394Q2QWQISSASAQ123O55OFG.. ÇEW~~]64]~~"
+                },
+
             });
 
             tm.Interval = 20;
