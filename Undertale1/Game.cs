@@ -37,6 +37,7 @@ namespace Undertale1
             gc = new GraphicsControl(pb);
             sprite = new Sprite(Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\spriteNoBG.png"), gc);
             map = new Map();
+            map.gc = gc;
             bg = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\mapas\\map.png");
             forms = form;
             gc.InitGraphics();
@@ -59,27 +60,87 @@ namespace Undertale1
             map.RestricedArea.Add(new Rectangle(18, 3862, 8, 210));
             map.RestricedArea.Add(new Rectangle(384, 3995, 316, 9));
             map.RestricedArea.Add(new Rectangle(384, 3905, 296, 55));
+            map.RestricedArea.Add(new Rectangle(10, 4034, 390, 14));
+            map.RestricedArea.Add(new Rectangle(674, 3925, 31, 24));
 
             map.Interactions.Add(new Message
             {
-                Area = new Rectangle(455, 3915, 39, 43),
-                Text = "É o Bobert Rosch"
+                Area = new Rectangle(150, 3915, 358, 40),
+                Text =
+                {
+                    "Nessa parte do mundo, a grama do vizinho é menos verde",
+                    "Na verdade, lá em cima nós nem temos grama"
+                }
+            });
+            map.Interactions.Add(new Message
+            {
+                Area = new Rectangle(455, 3915, 39, 60),
+                Text =
+                {
+                    "Essa imagem lembra alguma coisa que aprendi quando era apenas uma jovem máquina",
+                    "No século passado esse tipo de barba e vestimenta ainda era muito utilizado",
+                    "Talvez seja algum homem importante",
+                    "Aqui diz: Certamente não é o Stati"
+                }
+            });
+            map.Interactions.Add(new MutableInteract
+            {
+                Img = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\heart.jpg"),
+                NewImg = Image.FromFile("C:\\Users\\disrct\\Desktop\\Undertale\\sprites\\personagens\\heartBrok.png"),
+                Area = new Rectangle(59, 3902, 28, 32),
+                Text =
+                {
+                    "'É preciso passar pela dor para sobreviver aqui'",
+                    "..."
+                },
+                PostText =
+                {
+                    "Apenas um coração quebrado"
+                }
+            });
+
+            map.Interactions.Add(new Message
+            {
+                Title = "Zé maria",
+                Area = new Rectangle(840, 3920, 22, 34),
+                Text =
+                {
+                    "Ei, cuidado por onde anda!",
+                    "Esses últimos anos esse lugar tem estado muito perigoso.",
+                    "Nosso último recorde sem acidentes era 1604 dias :(", 
+                    "Vou te ensinar algumas coisas a NÃO serem feitas aqui ok?!"
+                }
             });
 
             tm.Interval = 20;
             tm.Start();
 
             int x = 0;
-            int y = 3833;
+            int y = 3850;
+            bool interacting = false;
+            bool inMiniGame = false;
+
+
             tm.Tick += delegate
             {
                 Rectangle recImg = new Rectangle(x, y, 400, 250);
                 Rectangle recTeste = new Rectangle(100, 100, 300, 300);
 
                 gc.ClearAll();
-                gc.DrawFullScreenRec(bg, recImg);
-                gc.DrawMessageBox(new Rectangle(),"albuelbe");
-                sprite.Draw();
+                if (inMiniGame)
+                {
+
+                }
+                else
+                {
+                    gc.DrawFullScreenRec(bg, recImg);
+                    map.DrawInteractions(x, y, forms.Width, forms.Height);
+                    if (interacting)
+                        map.InteractArea(x, y, forms.Width, forms.Height);
+                    sprite.Draw();
+
+                }
+
                 gc.Refresh();
             };
             forms.KeyDown += (s, e) =>
@@ -90,27 +151,43 @@ namespace Undertale1
                 switch (e.KeyCode)
                 {
                     case Keys.W:
+                        if (interacting)
+                            break;
+
                         sprite.State = 0;
                         y -= 3;
                         (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.D:
+                        if (interacting)
+                            break;
+
                         sprite.State = 1;
                         x += 3;
                         (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.A:
+                        if (interacting)
+                            break;
+
                         sprite.State = 2;
                         x -= 3;
                         (x, y) = map.VerifyArea(x, y, sprite);
                         break;
 
                     case Keys.S:
+                        if (interacting)
+                            break;
+
                         sprite.State = 3;
                         y += 3;
                         (x, y) = map.VerifyArea(x, y, sprite);
+                        break;
+
+                    case Keys.Space:
+                        interacting = map.StartInteract(x, y);
                         break;
                 }
             };

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +30,7 @@ namespace Undertale1
 
         public void DrawRec(Rectangle rec) => g.DrawRectangle(Pens.Red, rec);
 
-        public void DrawMessageBox(Rectangle rec, string message)
+        public void DrawMessageBox(Rectangle rec, string message, string title = "")
         {
             g.FillRectangle(Brushes.Black, rec);
             g.DrawRectangle(Pens.White, rec);
@@ -37,9 +38,15 @@ namespace Undertale1
             var pFontCollection= new PrivateFontCollection();
             pFontCollection.AddFontFile("C:\\Users\\disrct\\Desktop\\Undertale\\PixeloidSans-mLxMm.ttf");
             FontFamily family = pFontCollection.Families[0];
-            var font = new Font(family, 12f);
+            var font = new Font(family, 18f);
+            var tilteFont = new Font(family, 16f);
 
-            g.DrawString(message, font, Brushes.White, rec, new StringFormat()
+            g.DrawString(title, tilteFont, Brushes.White, rec, new StringFormat()
+            {
+                LineAlignment = StringAlignment.Near,
+            });
+
+            g.DrawString(message, font, Brushes.White, new Rectangle(30, rec.Y - 40, rec.Width - 100, 200), new StringFormat()
             {
                 LineAlignment = StringAlignment.Center,
             });
